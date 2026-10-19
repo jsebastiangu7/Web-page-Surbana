@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parque Residencial Surbaná IV Etapa</title>
+<meta name="description" content="Portal oficial de residentes del Parque Residencial Surbaná IV Etapa: documentos, noticias, clasificados, censo, zonas comunes, mudanzas y pago de administración.">
+<style>
+:root{
+  --green:#1a7a1f; --green-d:#125a16; --green-l:#e8f3e6;
+  --navy:#0b2a8c; --navy-d:#081f69; --navy-l:#e9edf9;
+  --brick:#8c2f26; --brick-l:#f7ebe9;
+  --bg:#f7faf5; --card:#ffffff; --ink:#1d2433; --muted:#5b6475; --line:#dfe6dc;
+  --radius:14px; --shadow:0 2px 10px rgba(11,42,140,.07);
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.55;font-size:16px}
+h1,h2,h3{font-family:var(--serif);line-height:1.2;margin:0 0 .5em}
+h1{font-size:clamp(1.9rem,4vw,2.8rem);color:var(--navy)}
+h2{font-size:clamp(1.5rem,3vw,2rem);color:var(--navy)}
+h3{font-size:1.15rem;color:var(--green-d)}
+p{margin:0 0 1em}
+a{color:var(--navy)}
+:focus-visible{outline:3px solid #f0b429;outline-offset:2px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* Header */
+.stripe{height:6px;background:linear-gradient(90deg,var(--green) 0 34%,var(--navy) 34% 67%,var(--brick) 67% 100%)}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 20px}
+.brand{display:flex;align-items:center;text-decoration:none}
+.brand svg{height:58px;width:auto;display:block}
+.cta{background:var(--green);color:#fff;text-decoration:none;font-weight:600;padding:10px 18px;border-radius:999px;white-space:nowrap;border:0;cursor:pointer;font-size:.95rem}
+.cta:hover{background:var(--green-d)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:1.1rem;cursor:pointer;color:var(--navy)}
+nav{border-top:1px solid var(--line);background:#fff}
+nav ul{list-style:none;margin:0 auto;padding:0 12px;display:flex;flex-wrap:wrap;justify-content:center;max-width:1120px}
+nav a{display:block;padding:12px 10px;text-decoration:none;color:var(--ink);font-size:.93rem;font-weight:500;border-bottom:3px solid transparent}
+nav a:hover{color:var(--green-d)}
+nav a.active{color:var(--navy);border-bottom-color:var(--green);font-weight:700}
+
+/* Pages */
+.page{display:none;padding:36px 0 64px;animation:fade .25s ease}
+.page.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.lead{font-size:1.08rem;color:var(--muted);max-width:720px}
+.page-head{margin-bottom:26px;border-left:5px solid var(--green);padding-left:16px}
+.page-head p{margin:0}
+
+/* Cards / grids */
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.card h3{margin-bottom:.4em}
+.pill{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:3px 10px;border-radius:999px}
+.p-green{background:var(--green-l);color:var(--green-d)}
+.p-navy{background:var(--navy-l);color:var(--navy)}
+.p-brick{background:var(--brick-l);color:var(--brick)}
+.muted{color:var(--muted)}
+.small{font-size:.88rem}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--green-l),#fff 55%,var(--navy-l));border:1px solid var(--line);border-radius:22px;padding:clamp(24px,5vw,56px);margin-bottom:28px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;background:rgba(26,122,31,.08)}
+.hero .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid var(--navy);color:var(--navy);background:#fff;cursor:pointer;font-size:.95rem;font-family:inherit}
+.btn:hover{background:var(--navy-l)}
+.btn.primary{background:var(--navy);color:#fff}
+.btn.primary:hover{background:var(--navy-d)}
+.btn.green{background:var(--green);border-color:var(--green);color:#fff}
+.btn.green:hover{background:var(--green-d)}
+.btn.sm{padding:7px 14px;font-size:.88rem}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.quick a{display:block;text-decoration:none;color:inherit;height:100%}
+.quick .card{transition:transform .15s,box-shadow .15s;height:100%}
+.quick .card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,42,140,.13)}
+.ico{font-size:1.7rem;margin-bottom:6px}
+
+/* Timeline */
+.timeline{border-left:3px solid var(--green);margin:10px 0 0 8px;padding-left:22px}
+.timeline .t{position:relative;margin-bottom:18px}
+.timeline .t::before{content:"";position:absolute;left:-30px;top:6px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--navy)}
+.timeline b{color:var(--navy)}
+
+/* People */
+.person{text-align:center}
+.avatar{width:68px;height:68px;border-radius:50%;margin:0 auto 10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:1.3rem;font-family:var(--serif)}
+.person h3{margin:0;font-size:1.02rem;color:var(--ink)}
+.person .role{font-size:.85rem;color:var(--muted)}
+.admin{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+.admin .avatar{width:96px;height:96px;font-size:1.9rem;margin:0}
+.section-title{margin:34px 0 14px}
+
+/* Chips / filters */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;cursor:pointer;font-size:.88rem;font-family:inherit;color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+
+/* Docs */
+.doc{display:flex;flex-direction:column;gap:8px}
+.doc .top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.doc h3{margin:0;font-size:1.02rem;color:var(--ink)}
+.doc .actions{display:flex;gap:8px;margin-top:auto;padding-top:8px}
+
+/* News */
+.news{display:flex;flex-direction:column;gap:8px}
+.news h3{margin:0;color:var(--ink)}
+.news button.link{align-self:flex-start;background:none;border:0;color:var(--navy);font-weight:600;cursor:pointer;padding:0;font-size:.92rem;font-family:inherit}
+.news button.link:hover{text-decoration:underline}
+
+/* Forms */
+form .row{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin-bottom:14px}
+label{display:block;font-size:.88rem;font-weight:600;margin-bottom:4px}
+input,select,textarea{width:100%;padding:10px 12px;border:1.5px solid #c9d3c6;border-radius:10px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{border-color:var(--navy);outline:none;box-shadow:0 0 0 3px rgba(11,42,140,.15)}
+textarea{min-height:100px;resize:vertical}
+fieldset{border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 6px;margin:0 0 20px;background:#fff}
+legend{font-family:var(--serif);font-weight:700;color:var(--green-d);padding:0 8px;font-size:1.08rem}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.92rem}
+.check input{width:auto;margin-top:4px}
+.notice{border-radius:12px;padding:14px 16px;margin-bottom:18px;font-size:.93rem}
+.notice.info{background:var(--navy-l);border:1px solid #c9d3f0}
+.notice.ok{background:var(--green-l);border:1px solid #bddbb8}
+.notice.warn{background:var(--brick-l);border:1px solid #e8c6c1}
+.hidden{display:none!important}
+
+/* Classifieds */
+.ad .price{font-weight:700;color:var(--green-d);font-size:1.1rem}
+.ad .meta{font-size:.84rem;color:var(--muted)}
+
+/* Rules */
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:0;margin-bottom:10px;box-shadow:var(--shadow)}
+summary{cursor:pointer;padding:14px 18px;font-weight:700;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:var(--serif);font-size:1.05rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;color:var(--green);font-family:var(--sans)}
+details[open] summary::after{content:"–"}
+details .body{padding:0 18px 14px}
+ul.rules{margin:0;padding-left:1.1rem}
+ul.rules li{margin-bottom:6px}
+
+/* Table */
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--navy);color:#fff;font-weight:600;font-size:.92rem}
+tr:last-child td{border-bottom:0}
+.status{border-radius:var(--radius);padding:18px 20px;display:flex;gap:14px;align-items:center;margin-bottom:22px;border:1px solid}
+.status.yes{background:var(--green-l);border-color:#bddbb8}
+.status.no{background:var(--brick-l);border-color:#e8c6c1}
+.status .dot{width:16px;height:16px;border-radius:50%;flex:none}
+.status.yes .dot{background:var(--green)}
+.status.no .dot{background:var(--brick)}
+
+/* Pay */
+.amount{font-family:var(--serif);font-size:2rem;color:var(--navy);font-weight:700}
+.copy-row{display:flex;gap:8px;align-items:center;justify-content:space-between;background:var(--bg);border:1px dashed #c9d3c6;border-radius:10px;padding:8px 12px;margin-bottom:8px;font-size:.93rem}
+.copy-row span.k{color:var(--muted);font-size:.8rem;display:block}
+
+/* Modal + toast */
+.modal-bg{position:fixed;inset:0;background:rgba(8,20,60,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:100}
+.modal-bg.open{display:flex}
+.modal{background:#fff;border-radius:18px;max-width:640px;width:100%;max-height:86vh;overflow:auto;padding:26px;position:relative;border-top:6px solid var(--green)}
+.modal .x{position:absolute;right:14px;top:10px;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(30px);background:var(--navy-d);color:#fff;padding:12px 20px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:200;max-width:90vw}
+.toast.show{opacity:1;transform:translateX(-50%)}
+
+/* Residuos y votación */
+.binpill{display:inline-block;font-size:.78rem;font-weight:700;padding:4px 12px;border-radius:999px;white-space:nowrap;border:1.5px solid transparent;text-align:center}
+.b-blanca{background:#fff;border-color:#9aa5b8;color:#333}
+.b-negra{background:#222;color:#fff}
+.b-verde{background:var(--green);color:#fff}
+.b-especial{background:var(--brick);color:#fff}
+.bin-row{display:flex;gap:14px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.bin-row:last-child{border-bottom:0}
+.bin-row .binpill{min-width:130px}
+.bin-card{border-top-width:6px;border-top-style:solid}
+.q-item{margin-bottom:18px}
+.q-item p{font-weight:600;margin-bottom:10px}
+.opt{display:flex;gap:10px;align-items:center;border:1.5px solid var(--line);border-radius:10px;padding:9px 12px;margin-bottom:8px;cursor:pointer;font-weight:500;background:#fff}
+.opt input{width:auto;margin:0}
+.opt:has(input:checked){border-color:var(--navy);background:var(--navy-l)}
+footer{background:var(--navy-d);color:#dfe5fa;padding:34px 0 22px;margin-top:20px}
+footer h4{font-family:var(--serif);color:#fff;margin:0 0 8px}
+footer a{color:#cfe8cc}
+footer .cols{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+footer .legal{border-top:1px solid rgba(255,255,255,.18);margin-top:22px;padding-top:14px;font-size:.82rem;color:#aab4dc}
+
+@media (max-width:860px){
+  .burger{display:block}
+  .topbar .cta{display:none}
+  nav{display:none}
+  nav.open{display:block}
+  nav ul{flex-direction:column;padding:6px 12px}
+  nav a{border-bottom:0;border-left:4px solid transparent;padding:11px 12px}
+  nav a.active{border-left-color:var(--green)}
+  .admin{grid-template-columns:1fr;text-align:center}
+  .admin .avatar{margin:0 auto}
+  .brand svg{height:46px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- Logo vectorial (recreación del logo original). Para usar la imagen original: reemplazar el contenido de <symbol id="logo"> o los <svg><use> por <img src="logo.png" alt="..."> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 940 250">
+    <rect x="62" y="16" width="205" height="170" fill="none" stroke="#8c2f26" stroke-width="4.5"/>
+    <path d="M8 168 C6 186 42 190 92 172 C132 158 164 142 196 120" fill="none" stroke="#1a7a1f" stroke-width="10" stroke-linecap="round"/>
+    <path d="M62 118 C38 70 94 20 152 18 C186 54 236 80 280 94 C216 106 152 126 120 136 C94 143 70 136 62 118 Z" fill="#1a7a1f"/>
+    <path d="M120 136 C200 114 252 120 262 160 C264 202 202 226 160 216 C122 206 100 166 120 136 Z" fill="#1a7a1f"/>
+    <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round">
+      <path d="M200 125 C170 140 130 160 100 175"/>
+      <path d="M118 62 C108 80 104 100 106 122"/>
+      <path d="M150 52 C140 70 132 86 130 104"/>
+      <path d="M176 64 C168 76 160 86 154 94"/>
+      <path d="M192 142 C214 138 236 146 244 156"/>
+      <path d="M180 166 C196 168 216 180 224 190"/>
+      <path d="M150 168 C160 176 170 186 176 196"/>
+    </g>
+    <text x="300" y="72" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="42" fill="#1a7a1f" textLength="520" lengthAdjust="spacingAndGlyphs">Parque Residencial</text>
+    <text x="292" y="190" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="112" fill="#0b2a8c" textLength="350" lengthAdjust="spacingAndGlyphs">Surbaná</text>
+    <text x="648" y="190" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="112" fill="#1a7a1f" textLength="82" lengthAdjust="spacingAndGlyphs">IV</text>
+    <text x="742" y="190" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="112" fill="#0b2a8c" textLength="190" lengthAdjust="spacingAndGlyphs">Etapa</text>
+  </symbol>
+</svg>
+
+<div class="stripe"></div>
+<header>
+  <div class="wrap topbar">
+    <a class="brand" href="#inicio" aria-label="Parque Residencial Surbaná IV Etapa — Inicio">
+      <svg viewBox="0 0 940 250" role="img" aria-label="Logo Parque Residencial Surbaná IV Etapa"><use href="#logo"/></svg>
+    </a>
+    <a class="cta" href="#pagos">Pagar administración</a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">☰ Menú</button>
+  </div>
+  <nav id="nav" aria-label="Navegación principal">
+    <ul>
+      <li><a href="#inicio" data-p="inicio">Inicio</a></li>
+      <li><a href="#acerca" data-p="acerca">Acerca del conjunto</a></li>
+      <li><a href="#documentos" data-p="documentos">Actas y documentos</a></li>
+      <li><a href="#noticias" data-p="noticias">Noticias</a></li>
+      <li><a href="#clasificados" data-p="clasificados">Clasificados</a></li>
+      <li><a href="#censo" data-p="censo">Censo</a></li>
+      <li><a href="#zonas" data-p="zonas">Zonas comunes</a></li>
+      <li><a href="#residuos" data-p="residuos">Mascotas y residuos</a></li>
+      <li><a href="#mudanzas" data-p="mudanzas">Mudanzas y locativos</a></li>
+      <li><a href="#votacion" data-p="votacion">Asambleas y votación</a></li>
+      <li><a href="#pagos" data-p="pagos">Pago de administración</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ INICIO ============ -->
+<section class="page" id="page-inicio">
+  <div class="wrap">
+    <div class="hero">
+      <span class="pill p-green">Portal de residentes</span>
+      <h1 style="margin-top:12px">Bienvenidos a Surbaná IV Etapa</h1>
+      <p class="lead">Un espacio para estar informados, al día y en comunidad. Aquí encuentras documentos, noticias, trámites y los canales para convivir mejor.</p>
+      <div class="btns">
+        <a class="btn green" href="#pagos">Pagar administración</a>
+        <a class="btn" href="#documentos">Ver actas y documentos</a>
+        <a class="btn" href="#censo">Actualizar mis datos</a>
+      </div>
+    </div>
+
+    <div class="notice info"><b>Próxima reunión del Consejo de Administración:</b> sábado 24 de octubre de 2026, 10:00 a. m., salón social. Los residentes pueden asistir como oyentes.</div>
+
+    <div class="grid g4 quick" style="margin-bottom:34px">
+      <a href="#documentos"><div class="card"><div class="ico">📄</div><h3>Actas y documentos</h3><p class="small muted">Actas, reglamentos y estados financieros.</p></div></a>
+      <a href="#clasificados"><div class="card"><div class="ico">🏷️</div><h3>Clasificados</h3><p class="small muted">Compra, vende u ofrece servicios entre vecinos.</p></div></a>
+      <a href="#zonas"><div class="card"><div class="ico">🌳</div><h3>Zonas comunes</h3><p class="small muted">Reglas de uso y parqueaderos.</p></div></a>
+      <a href="#mudanzas"><div class="card"><div class="ico">🚚</div><h3>Mudanzas y locativos</h3><p class="small muted">Horarios y requisitos.</p></div></a>
+      <a href="#residuos"><div class="card"><div class="ico">♻️</div><h3>Mascotas y residuos</h3><p class="small muted">Cuidado de mascotas, basuras y reciclaje.</p></div></a>
+      <a href="#votacion"><div class="card"><div class="ico">🗳️</div><h3>Asambleas y votación</h3><p class="small muted">Vota en asambleas ordinarias y extraordinarias.</p></div></a>
+    </div>
+
+    <h2>Lo último</h2>
+    <div class="grid g3" id="home-news"></div>
+    <p style="margin-top:18px"><a href="#noticias">Ver todas las noticias →</a></p>
+  </div>
+</section>
+
+<!-- ============ ACERCA ============ -->
+<section class="page" id="page-acerca">
+  <div class="wrap">
+    <div class="page-head"><h1>Acerca del conjunto</h1><p class="lead">Una comunidad que se cuida entre todos.</p></div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h2>Nuestra historia</h2>
+        <p class="small muted">Texto de ejemplo — reemplazar con la historia real del conjunto.</p>
+        <div class="timeline">
+          <div class="t"><b>2006</b> — Inicio de la construcción del proyecto Surbaná.</div>
+          <div class="t"><b>2009</b> — Entrega de las primeras etapas y conformación de la propiedad horizontal.</div>
+          <div class="t"><b>2012</b> — Entrega de la IV Etapa y sus zonas verdes.</div>
+          <div class="t"><b>2018</b> — Renovación del salón social y la zona infantil.</div>
+          <div class="t"><b>2023</b> — Modernización de citofonía y cámaras de seguridad.</div>
+          <div class="t"><b>2025</b> — Pintura de fachadas y mantenimiento de cubiertas.</div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Lo que nos define</h2>
+        <ul class="rules">
+          <li><b>Zonas verdes</b> cuidadas por todos: la hoja del logo no es casualidad.</li>
+          <li><b>Convivencia</b> basada en el respeto y en el cumplimiento del reglamento.</li>
+          <li><b>Transparencia</b>: informes de gestión y estados financieros públicos para residentes.</li>
+          <li><b>Seguridad</b> con vigilancia las 24 horas.</li>
+        </ul>
+        <p class="small muted" style="margin-top:14px">Datos de ejemplo: ajustar número de torres, apartamentos y área.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Administración</h2>
+    <div class="card admin">
+      <div class="avatar" style="background:var(--navy)">ML</div>
+      <div>
+        <h3 style="margin-bottom:2px">Marta Lucía Rodríguez</h3>
+        <span class="pill p-navy">Administradora y representante legal</span>
+        <p style="margin-top:10px">Administradora de profesión, lidera la gestión financiera, operativa y administrativa del conjunto. Atiende a los residentes con cita previa o en horario de oficina.</p>
+        <p class="small muted" style="margin:0">administracion@surbana4.example · Lunes a viernes, 8:00 a. m. – 5:00 p. m.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Equipo de seguridad <span class="pill p-green">24 horas</span></h2>
+    <div class="grid g4" id="team-seg"></div>
+
+    <h2 class="section-title">Mantenimiento y servicios generales</h2>
+    <div class="grid g4" id="team-man"></div>
+    <p class="small muted" style="margin-top:14px">Nombres ficticios de ejemplo.</p>
+  </div>
+</section>
+
+<!-- ============ DOCUMENTOS ============ -->
+<section class="page" id="page-documentos">
+  <div class="wrap">
+    <div class="page-head"><h1>Actas y documentos</h1><p class="lead">Consulta y descarga los documentos oficiales del conjunto.</p></div>
+    <div class="chips" id="doc-filters" role="group" aria-label="Filtrar por tipo"></div>
+    <div class="grid g3" id="doc-grid"></div>
+  </div>
+</section>
+
+<!-- ============ NOTICIAS ============ -->
+<section class="page" id="page-noticias">
+  <div class="wrap">
+    <div class="page-head"><h1>Noticias, comunicados e informes</h1><p class="lead">Información oficial de la administración y el consejo.</p></div>
+    <div class="chips" id="news-filters" role="group" aria-label="Filtrar por categoría"></div>
+    <div class="grid g2" id="news-grid"></div>
+  </div>
+</section>
+
+<!-- ============ CLASIFICADOS ============ -->
+<section class="page" id="page-clasificados">
+  <div class="wrap">
+    <div class="page-head"><h1>Clasificados</h1><p class="lead">Un tablero para vecinos. Publicar es exclusivo para residentes a paz y salvo con la administración.</p></div>
+
+    <div class="grid g2" style="align-items:start;margin-bottom:30px">
+      <div class="card" id="ad-gate">
+        <h2>Publicar un clasificado</h2>
+        <div class="notice info small">Verifica tu estado para publicar. <b>Demo:</b> interior 1, apto 101, cédula <code>1234</code> (a paz y salvo) · interior 2, apto 202, cédula <code>5678</code> (en mora).</div>
+        <form id="verify-form" novalidate>
+          <div class="row">
+            <div><label for="v-int">Interior / Torre</label>
+              <select id="v-int" required><option value="">Selecciona</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+            <div><label for="v-apto">Apartamento</label><input id="v-apto" inputmode="numeric" placeholder="Ej. 101" required></div>
+          </div>
+          <div class="row"><div><label for="v-doc">Últimos 4 dígitos de la cédula</label><input id="v-doc" inputmode="numeric" maxlength="4" placeholder="••••" required></div></div>
+          <button class="btn primary" type="submit">Verificar estado</button>
+        </form>
+        <div id="verify-msg" style="margin-top:14px"></div>
+      </div>
+
+      <div class="card hidden" id="ad-form-card">
+        <h2>Nuevo clasificado</h2>
+        <div class="notice ok small" id="ad-who"></div>
+        <form id="ad-form">
+          <div class="row">
+            <div><label for="a-title">Título</label><input id="a-title" maxlength="70" required></div>
+            <div><label for="a-cat">Categoría</label>
+              <select id="a-cat" required><option>Venta</option><option>Servicios</option><option>Arriendo</option><option>Se busca</option><option>Otros</option></select></div>
+          </div>
+          <div class="row">
+            <div><label for="a-price">Precio (COP, opcional)</label><input id="a-price" type="number" min="0" step="1000"></div>
+            <div><label for="a-contact">Contacto (celular)</label><input id="a-contact" inputmode="tel" required placeholder="300 000 0000"></div>
+          </div>
+          <div style="margin-bottom:14px"><label for="a-desc">Descripción</label><textarea id="a-desc" maxlength="400" required></textarea></div>
+          <label class="check" style="margin-bottom:14px"><input type="checkbox" id="a-ok" required> Declaro que el anuncio es legal y no incluye armas, licor, medicamentos ni actividades prohibidas por el reglamento. La administración puede retirarlo.</label>
+          <button class="btn green" type="submit">Publicar</button>
+          <button class="btn" type="button" id="ad-logout">Salir</button>
+        </form>
+      </div>
+    </div>
+
+    <h2>Anuncios publicados</h2>
+    <div class="chips" id="ad-filters" role="group" aria-label="Filtrar clasificados"></div>
+    <div class="grid g3" id="ad-grid"></div>
+  </div>
+</section>
+
+<!-- ============ CENSO ============ -->
+<section class="page" id="page-censo">
+  <div class="wrap">
+    <div class="page-head"><h1>Censo y actualización de datos</h1><p class="lead">Mantener tus datos al día permite emergencias bien atendidas, comunicación efectiva y control de accesos. Una vez al año o cuando algo cambie.</p></div>
+    <form id="censo-form" style="max-width:860px">
+      <fieldset>
+        <legend>1. Datos personales (persona que responde)</legend>
+        <div class="row">
+          <div><label for="c-nom">Nombres</label><input id="c-nom" required autocomplete="given-name"></div>
+          <div><label for="c-ape">Apellidos</label><input id="c-ape" required autocomplete="family-name"></div>
+        </div>
+        <div class="row">
+          <div><label for="c-tdoc">Tipo de documento</label><select id="c-tdoc" required><option>CC</option><option>CE</option><option>Pasaporte</option><option>PPT</option></select></div>
+          <div><label for="c-doc">Número de documento</label><input id="c-doc" inputmode="numeric" required></div>
+        </div>
+        <div class="row">
+          <div><label for="c-cel">Celular</label><input id="c-cel" type="tel" required autocomplete="tel"></div>
+          <div><label for="c-mail">Correo electrónico</label><input id="c-mail" type="email" required autocomplete="email"></div>
+        </div>
+        <div class="row">
+          <div><label for="c-cal">Calidad</label><select id="c-cal" required><option value="">Selecciona</option><option>Propietario residente</option><option>Propietario no residente</option><option>Arrendatario</option><option>Familiar / otro</option></select></div>
+          <div><label for="c-emn">Contacto de emergencia (nombre)</label><input id="c-emn" required></div>
+          <div><label for="c-emt">Teléfono de emergencia</label><input id="c-emt" type="tel" required></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Interior y apartamento</legend>
+        <div class="row">
+          <div><label for="c-int">Interior / Torre</label><select id="c-int" required><option value="">Selecciona</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+          <div><label for="c-apto">Apartamento</label><input id="c-apto" inputmode="numeric" required></div>
+          <div><label for="c-hab">Número de residentes</label><input id="c-hab" type="number" min="0" max="20" required></div>
+        </div>
+        <div class="row">
+          <div><label for="c-men">Menores de 18 años</label><input id="c-men" type="number" min="0" max="20" value="0"></div>
+          <div><label for="c-may">Adultos mayores (60+)</label><input id="c-may" type="number" min="0" max="20" value="0"></div>
+          <div><label for="c-mas">Mascotas</label><input id="c-mas" type="number" min="0" max="10" value="0"></div>
+        </div>
+        <div class="row">
+          <div><label for="c-prop">Nombre del propietario (si eres arrendatario)</label><input id="c-prop"></div>
+          <div><label for="c-proptel">Teléfono del propietario</label><input id="c-proptel" type="tel"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. Vehículo (opcional)</legend>
+        <label class="check" style="margin-bottom:14px"><input type="checkbox" id="c-hasveh"> Tengo vehículo</label>
+        <div id="veh-box" class="hidden">
+          <div class="row">
+            <div><label for="c-vtipo">Tipo</label><select id="c-vtipo"><option>Automóvil</option><option>Camioneta</option><option>Motocicleta</option><option>Bicicleta</option></select></div>
+            <div><label for="c-placa">Placa</label><input id="c-placa" maxlength="7" style="text-transform:uppercase" placeholder="ABC123"></div>
+            <div><label for="c-vmarca">Marca y línea</label><input id="c-vmarca"></div>
+          </div>
+          <div class="row">
+            <div><label for="c-vcolor">Color</label><input id="c-vcolor"></div>
+            <div><label for="c-park">Parqueadero asignado</label><input id="c-park" placeholder="Ej. P-45 o ninguno"></div>
+          </div>
+        </div>
+      </fieldset>
+
+      <label class="check" style="margin-bottom:18px"><input type="checkbox" id="c-hd" required> Autorizo el tratamiento de mis datos personales por parte de la administración del conjunto para fines de gestión, seguridad y comunicación, conforme a la Ley 1581 de 2012 y la política de tratamiento de datos vigente.</label>
+      <button class="btn primary" type="submit">Enviar actualización</button>
+    </form>
+    <div id="censo-ok" class="hidden" style="max-width:860px"></div>
+  </div>
+</section>
+
+<!-- ============ ZONAS COMUNES ============ -->
+<section class="page" id="page-zonas">
+  <div class="wrap">
+    <div class="page-head"><h1>Zonas comunes</h1><p class="lead">Son de todos: úsalas con cuidado y respeto. Reglas de ejemplo, ajustar al reglamento vigente.</p></div>
+    <div class="grid g2" style="margin-bottom:26px">
+      <div class="card"><h3>Normas generales</h3>
+        <ul class="rules">
+          <li>Horario de silencio: <b>10:00 p. m. a 6:00 a. m.</b></li>
+          <li>Los menores de 12 años deben estar acompañados por un adulto.</li>
+          <li>Prohibido el consumo de licor y cigarrillo en zonas comunes.</li>
+          <li>Cada residente responde por los daños que cause él o sus invitados.</li>
+        </ul></div>
+      <div class="card"><h3>Mascotas en zonas comunes</h3>
+        <ul class="rules">
+          <li>Siempre con correa y bajo control de su responsable.</li>
+          <li>Recoger y disponer los excrementos de inmediato.</li>
+          <li>Prohibido el ingreso a parque infantil, gimnasio y salón social.</li>
+          <li>Razas de manejo especial: bozal y correa corta.</li>
+        </ul></div>
+    </div>
+
+    <details open><summary>Salón social</summary><div class="body"><ul class="rules">
+      <li>Reserva con la administración, mínimo 8 días antes, y solo residentes a paz y salvo.</li>
+      <li>Horario: domingo a jueves hasta las 10:00 p. m.; viernes y sábado hasta las 11:00 p. m.</li>
+      <li>Aforo máximo: 60 personas. Depósito reembolsable por daños y aseo.</li>
+      <li>El residente que reserva debe estar presente todo el evento.</li>
+    </ul></div></details>
+    <details><summary>Zona BBQ</summary><div class="body"><ul class="rules">
+      <li>Reserva por turnos de 4 horas. Usar únicamente carbón o gas autorizado.</li>
+      <li>Dejar la parrilla y el área limpias; no dejar brasas encendidas.</li>
+      <li>Máximo 15 personas por turno.</li>
+    </ul></div></details>
+    <details><summary>Gimnasio</summary><div class="body"><ul class="rules">
+      <li>Horario: 5:00 a. m. a 9:00 p. m. Solo mayores de 16 años.</li>
+      <li>Usar toalla, calzado deportivo y limpiar el equipo después de usarlo.</li>
+      <li>Máximo 45 minutos por turno cuando haya espera.</li>
+    </ul></div></details>
+    <details><summary>Parque infantil y juegos</summary><div class="body"><ul class="rules">
+      <li>Para niños hasta 12 años, siempre con supervisión de un adulto.</li>
+      <li>Horario: 8:00 a. m. a 8:00 p. m.</li>
+      <li>Prohibido el uso de patinetas, bicicletas y balones en el área de juegos.</li>
+    </ul></div></details>
+    <details><summary>Cancha múltiple</summary><div class="body"><ul class="rules">
+      <li>Uso por turnos de 1 hora cuando haya espera. Horario: 7:00 a. m. a 9:00 p. m.</li>
+      <li>Calzado deportivo apropiado. Prohibido el ingreso de vehículos.</li>
+    </ul></div></details>
+    <details><summary>Parqueaderos</summary><div class="body">
+      <h3>Residentes</h3>
+      <ul class="rules">
+        <li>Usar solo el parqueadero asignado y mantener el vehículo identificado.</li>
+        <li>Prohibido lavar vehículos, hacer reparaciones o dejar partes y llantas en el parqueadero.</li>
+        <li>Velocidad máxima 10 km/h. Pito solo en emergencias.</li>
+      </ul>
+      <h3 style="margin-top:12px">Visitantes</h3>
+      <ul class="rules">
+        <li>Registro en portería con documento y placa.</li>
+        <li>Permanencia máxima de 12 horas; más tiempo requiere autorización de la administración.</li>
+        <li>Cada residente es responsable del comportamiento y los daños de su visitante.</li>
+      </ul>
+      <h3 style="margin-top:12px">Motos y bicicletas</h3>
+      <ul class="rules">
+        <li>Solo en las zonas demarcadas y con candado; la administración no se hace responsable por pérdidas.</li>
+        <li>Motos: ingresar y salir con el motor a baja marcha.</li>
+      </ul>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ MASCOTAS Y RESIDUOS ============ -->
+<section class="page" id="page-residuos">
+  <div class="wrap">
+    <div class="page-head"><h1>Mascotas, basuras y reciclaje</h1><p class="lead">Convivir bien también es cuidar a los animales y manejar responsablemente lo que desechamos. Reglas de ejemplo: ajustar al manual de convivencia vigente.</p></div>
+
+    <h2>Cuidado de las mascotas</h2>
+    <div class="grid g3">
+      <div class="card"><h3>Tenencia responsable</h3>
+        <ul class="rules">
+          <li>Registra a tu mascota en el <a href="#censo">censo</a> (especie, raza y nombre).</li>
+          <li>Carné de vacunación al día, incluida la antirrábica.</li>
+          <li>Identificación con placa o microchip y, si es posible, esterilización.</li>
+          <li>Máximo 2 mascotas por apartamento (ejemplo).</li>
+        </ul></div>
+      <div class="card"><h3>Convivencia</h3>
+        <ul class="rules">
+          <li>Correa corta en zonas comunes y en el ascensor; cede el ascensor si alguien lo pide.</li>
+          <li>Recoge y embolsa los excrementos de inmediato; limpia los orines.</li>
+          <li>Evita ladridos prolongados y no dejes a la mascota sola por horas en balcón o terraza.</li>
+          <li>Prohibido el ingreso al parque infantil, gimnasio, salón social y zona BBQ.</li>
+        </ul></div>
+      <div class="card"><h3>Bienestar y seguridad</h3>
+        <ul class="rules">
+          <li>Alimento, agua, sombra y atención veterinaria: el maltrato y el abandono son delito (Ley 1774 de 2016).</li>
+          <li>Instala mallas de seguridad en ventanas y balcones.</li>
+          <li>No alimentes animales callejeros en el conjunto: atrae plagas y conflictos.</li>
+          <li>Si ves un animal perdido o herido, avisa en portería.</li>
+        </ul></div>
+    </div>
+    <div class="notice info small" style="margin-top:18px"><b>Ejemplares caninos potencialmente peligrosos:</b> deben transitar con correa y bozal, estar registrados y contar con póliza de responsabilidad civil (Ley 746 de 2002). El dueño responde por los daños o lesiones que cause su mascota.</div>
+
+    <h2 class="section-title">Disposición de basuras</h2>
+    <div class="grid g2">
+      <div class="card"><h3>Horarios y entrega</h3>
+        <ul class="rules">
+          <li>Recolección municipal: martes, jueves y sábado (ejemplo; ajustar a la ruta real).</li>
+          <li>Entrega de bolsas al cuarto de basuras todos los días de 6:00 a. m. a 9:00 p. m. (ejemplo).</li>
+          <li>Bolsas bien cerradas. Nunca en pasillos, escaleras ni frente a la puerta del apartamento.</li>
+          <li>Prohibido arrojar basura por ventanas o balcones.</li>
+          <li>Cartón aplastado y plegado; el cuarto de basuras queda siempre cerrado.</li>
+        </ul></div>
+      <div class="card"><h3>Lo que no va al cuarto de basuras</h3>
+        <ul class="rules">
+          <li>Escombros, muebles y colchones: coordina la recolección con la administración.</li>
+          <li>Residuos de obras locativas: los retira el contratista el mismo día.</li>
+          <li>Pilas, bombillos, químicos, aceite usado, electrónicos y medicamentos (ver residuos especiales).</li>
+          <li>Líquidos, brasas calientes y vidrio roto suelto (envuélvelo bien).</li>
+        </ul></div>
+    </div>
+
+    <h2 class="section-title">Reciclaje: separa en la fuente</h2>
+    <p class="muted small">Código de colores nacional de bolsas (Resolución 2184 de 2019). Los residuos limpios y secos se aprovechan; los sucios o mezclados se pierden.</p>
+    <div class="grid g4">
+      <div class="card bin-card" style="border-top-color:#9aa5b8"><span class="binpill b-blanca">Bolsa blanca</span><h3 style="margin-top:10px">Aprovechables</h3><p class="small">Papel, cartón, plástico, vidrio y metal, limpios y secos.</p></div>
+      <div class="card bin-card" style="border-top-color:#222"><span class="binpill b-negra">Bolsa negra</span><h3 style="margin-top:10px">No aprovechables</h3><p class="small">Papel higiénico, servilletas y pañuelos usados, pañales, colillas, barrido.</p></div>
+      <div class="card bin-card" style="border-top-color:var(--green)"><span class="binpill b-verde">Bolsa verde</span><h3 style="margin-top:10px">Orgánicos</h3><p class="small">Restos de comida, cáscaras, borra de café y residuos de jardín.</p></div>
+      <div class="card bin-card" style="border-top-color:var(--brick)"><span class="binpill b-especial">Residuos especiales</span><h3 style="margin-top:10px">No van en bolsa común</h3><p class="small">Pilas, bombillos, electrónicos, medicamentos y aceite usado.</p></div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <h3>¿Dónde va...?</h3>
+      <label for="bin-q" class="small muted">Escribe un residuo (ej. pañal, botella, pilas)</label>
+      <input id="bin-q" type="search" placeholder="Buscar residuo" autocomplete="off" style="margin-bottom:10px">
+      <div id="bin-list"></div>
+    </div>
+    <div class="notice ok" style="margin-top:18px"><b>Jornada de reciclaje y residuos especiales:</b> primer sábado de cada mes, 9:00 a. m. a 12:00 m., parqueadero de visitantes (ejemplo). El incumplimiento reiterado puede generar llamados de atención y sanciones según el manual de convivencia y la Ley 675 de 2001.</div>
+  </div>
+</section>
+
+<!-- ============ MUDANZAS ============ -->
+<section class="page" id="page-mudanzas">
+  <div class="wrap">
+    <div class="page-head"><h1>Mudanzas y locativos</h1><p class="lead">Reglamento para ingresos, retiros de trasteos y obras dentro de los apartamentos.</p></div>
+
+    <div id="move-status" class="status no"><div class="dot"></div><div><b id="ms-title"></b><div class="small muted" id="ms-sub"></div></div></div>
+
+    <div class="grid g2" style="margin-bottom:26px;align-items:start">
+      <div>
+        <h2>Horarios permitidos</h2>
+        <table>
+          <thead><tr><th>Día</th><th>Horario</th></tr></thead>
+          <tbody>
+            <tr><td>Lunes a viernes</td><td><b>8:00 a. m. – 5:00 p. m.</b></td></tr>
+            <tr><td>Sábados</td><td><b>8:00 a. m. – 12:00 m.</b></td></tr>
+            <tr><td>Domingos y festivos</td><td>No se permiten</td></tr>
+          </tbody>
+        </table>
+        <p class="small muted" style="margin-top:10px">La hora de finalización incluye el aseo y la entrega de zonas comunes.</p>
+      </div>
+      <div class="card">
+        <h3>Requisitos para mudanzas</h3>
+        <ul class="rules">
+          <li>Estar a paz y salvo con la administración.</li>
+          <li>Solicitar con mínimo 3 días hábiles de anticipación.</li>
+          <li>Informar empresa, placa del vehículo y personal que ingresa.</li>
+          <li>Proteger paredes, pisos y ascensor; un funcionario revisa antes y después.</li>
+          <li>Los daños a zonas comunes son responsabilidad del residente.</li>
+          <li>Residuos y embalajes se retiran el mismo día.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:26px">
+      <h3>Reglas para trabajos locativos y reparaciones</h3>
+      <div class="grid g2">
+        <ul class="rules">
+          <li>Mismo horario que las mudanzas. Ruido fuerte (taladro, demolición): solo de 9:00 a. m. a 4:00 p. m. entre semana.</li>
+          <li>Informar por escrito el tipo de obra y duración estimada.</li>
+          <li>Obras estructurales requieren autorización del consejo y, si aplica, licencia.</li>
+        </ul>
+        <ul class="rules">
+          <li>Personal con ARL vigente y carné; registro en portería.</li>
+          <li>Escombros por cuenta del residente; no se dejan en zonas comunes ni se botan por los ductos de basura.</li>
+          <li>Prohibido el uso de zonas comunes como bodega de materiales.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Solicitar fecha</h2>
+    <div class="card" style="max-width:860px">
+      <div class="notice info small">La solicitud se valida contra el horario permitido y queda sujeta a confirmación de la administración.</div>
+      <form id="move-form">
+        <div class="row">
+          <div><label for="m-nom">Nombre del residente</label><input id="m-nom" required></div>
+          <div><label for="m-apto">Interior y apartamento</label><input id="m-apto" placeholder="Ej. 3-402" required></div>
+          <div><label for="m-tipo">Tipo</label><select id="m-tipo"><option>Mudanza – entrada</option><option>Mudanza – salida</option><option>Trabajo locativo</option></select></div>
+        </div>
+        <div class="row">
+          <div><label for="m-fecha">Fecha</label><input id="m-fecha" type="date" required></div>
+          <div><label for="m-ini">Hora de inicio</label><input id="m-ini" type="time" required></div>
+          <div><label for="m-fin">Hora de finalización</label><input id="m-fin" type="time" required></div>
+        </div>
+        <div class="row">
+          <div><label for="m-emp">Empresa o responsable</label><input id="m-emp"></div>
+          <div><label for="m-placa">Placa del vehículo</label><input id="m-placa" style="text-transform:uppercase" maxlength="7"></div>
+        </div>
+        <button class="btn primary" type="submit">Enviar solicitud</button>
+      </form>
+      <div id="move-msg" style="margin-top:14px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ASAMBLEAS Y VOTACIÓN ============ -->
+<section class="page" id="page-votacion">
+  <div class="wrap">
+    <div class="page-head"><h1>Asambleas y votación</h1><p class="lead">Participa en las asambleas generales ordinarias y extraordinarias. Un voto por unidad privada, ponderado por su coeficiente de copropiedad.</p></div>
+
+    <div class="grid g2" style="align-items:start;margin-bottom:22px">
+      <div class="card"><h3>Reglas de participación (ejemplo)</h3>
+        <ul class="rules">
+          <li>Cada unidad privada tiene un voto, ponderado por su coeficiente de copropiedad.</li>
+          <li>Vota el propietario. El arrendatario solo puede hacerlo con poder escrito del propietario.</li>
+          <li>Los propietarios en mora no pueden votar (Ley 675 de 2001). <a href="#pagos">Ponte al día →</a></li>
+          <li>Los apoderados entregan el poder a la administración mínimo 48 horas antes.</li>
+          <li>El voto registrado es definitivo. Los resultados se publican al cierre, con acta.</li>
+          <li>Quórum y mayorías según la ley y el reglamento de propiedad horizontal.</li>
+        </ul></div>
+      <div class="card">
+        <h3>Selecciona la asamblea</h3>
+        <label for="asm-sel" class="small muted">Asamblea</label>
+        <select id="asm-sel"></select>
+        <div id="asm-info"></div>
+      </div>
+    </div>
+
+    <div class="notice warn small"><b>Modo demostración:</b> este formulario guarda el voto solo en tu navegador. Una votación válida requiere servidor, identificación de cada propietario, un voto por unidad, registro auditable y supervisión del comité verificador y del revisor fiscal.</div>
+
+    <div id="vote-area"></div>
+  </div>
+</section>
+
+<!-- ============ PAGOS ============ -->
+<section class="page" id="page-pagos">
+  <div class="wrap">
+    <div class="page-head"><h1>Pago de administración</h1><p class="lead">Paga tu cuota a tiempo: de ello depende el mantenimiento, la vigilancia y los servicios de todos.</p></div>
+
+    <div class="grid g3" style="align-items:start">
+      <div class="card">
+        <span class="pill p-green">En línea</span>
+        <h3 style="margin-top:10px">Pago por PSE</h3>
+        <p class="small muted">Paga desde tu banco, sin salir de casa.</p>
+        <div style="margin:8px 0 14px"><label for="p-tipo">Tipo de apartamento</label>
+          <select id="p-tipo"><option value="285000">Tipo A (ejemplo)</option><option value="330000">Tipo B (ejemplo)</option><option value="375000">Tipo C (ejemplo)</option></select></div>
+        <div class="muted small">Cuota ordinaria mensual</div>
+        <div class="amount" id="p-amount">$285.000</div>
+        <p class="small muted">Valores ficticios de ejemplo.</p>
+        <button class="btn green" id="pay-online" style="width:100%">Pagar en línea</button>
+      </div>
+
+      <div class="card">
+        <span class="pill p-navy">Transferencia</span>
+        <h3 style="margin-top:10px">Consignación o transferencia</h3>
+        <div class="copy-row"><div><span class="k">Banco</span>Banco Ejemplo</div></div>
+        <div class="copy-row"><div><span class="k">Cuenta de ahorros</span><span id="acc">000-000000-00</span></div><button class="btn sm" data-copy="acc">Copiar</button></div>
+        <div class="copy-row"><div><span class="k">Titular</span>Conjunto Residencial Surbaná IV Etapa</div></div>
+        <div class="copy-row"><div><span class="k">NIT</span><span id="nit">900.000.000-0</span></div><button class="btn sm" data-copy="nit">Copiar</button></div>
+        <p class="small muted">En la referencia escribe interior y apartamento (ej. 3-402) y envía el comprobante a <b>pagos@surbana4.example</b>.</p>
+      </div>
+
+      <div class="card">
+        <span class="pill p-brick">Presencial</span>
+        <h3 style="margin-top:10px">En la administración</h3>
+        <p>Oficina de administración, primer piso del salón social.</p>
+        <p class="small muted">Lunes a viernes, 8:00 a. m. – 5:00 p. m.<br>Sábados, 8:00 a. m. – 12:00 m.</p>
+        <p class="small">Solicita tu <b>estado de cuenta</b> o <b>paz y salvo</b> escribiendo a administracion@surbana4.example.</p>
+      </div>
+    </div>
+
+    <div class="notice warn" style="margin-top:22px"><b>Recuerda:</b> el pago se realiza dentro de los primeros 10 días del mes (ejemplo). Los pagos posteriores pueden generar intereses de mora conforme a la ley y al reglamento. Estar a paz y salvo habilita servicios como clasificados, reservas de salón y mudanzas.</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><h4>Parque Residencial Surbaná IV Etapa</h4><p class="small">Calle XX # XX-XX · Bogotá D. C.</p></div>
+      <div><h4>Administración</h4><p class="small">(601) 000 0000<br>WhatsApp +57 300 000 0000<br><a href="mailto:administracion@surbana4.example">administracion@surbana4.example</a></p></div>
+      <div><h4>Portería 24 h</h4><p class="small">(601) 000 0001<br>En emergencias llama a la portería y al 123.</p></div>
+    </div>
+    <div class="legal">© 2026 Parque Residencial Surbaná IV Etapa. Portal informativo para residentes. Contenido inicial de ejemplo.</div>
+  </div>
+</footer>
+
+<div class="modal-bg" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal"><button class="x" id="modal-x" aria-label="Cerrar">×</button><div id="modal-body"></div></div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ============================================================
+   CONFIGURACIÓN — editar aquí
+   ============================================================ */
+const PAYMENT_URL = "";   // Pega aquí el enlace de pago real (PSE / pasarela). Vacío = modo demostración.
+
+const SEGURIDAD = [
+  {n:"Carlos Ortiz",  r:"Supervisor de seguridad", c:"var(--navy)"},
+  {n:"Jhon Prada",    r:"Guarda · Turno diurno",   c:"var(--green)"},
+  {n:"Wilmer Gómez",  r:"Guarda · Turno tarde",    c:"var(--green)"},
+  {n:"Andrés Mora",   r:"Guarda · Turno nocturno", c:"var(--brick)"}
+];
+const MANTENIMIENTO = [
+  {n:"Jairo Beltrán",  r:"Mantenimiento general",      c:"var(--navy)"},
+  {n:"Luz Marina Cruz",r:"Servicios generales y aseo", c:"var(--green)"},
+  {n:"Hernán Salcedo", r:"Jardinería y zonas verdes",  c:"var(--green)"},
+  {n:"Diego Rincón",   r:"Piscina, bombas y ascensores (apoyo)", c:"var(--brick)"}
+];
+
+const DOCS = [
+  {id:1, t:"Acta de Asamblea General Ordinaria 2026", k:"Acta", d:"2026-03-21", s:"Aprobación de estados financieros y presupuesto."},
+  {id:2, t:"Acta del Consejo de Administración No. 09", k:"Acta", d:"2026-09-12", s:"Seguimiento a obras y cartera."},
+  {id:3, t:"Acta del Consejo de Administración No. 08", k:"Acta", d:"2026-08-08", s:"Contratación de mantenimiento de cubiertas."},
+  {id:4, t:"Acta de Asamblea General Ordinaria 2025", k:"Acta", d:"2025-03-22", s:"Elección del consejo y revisor fiscal."},
+  {id:5, t:"Manual de convivencia", k:"Reglamento", d:"2024-05-10", s:"Normas de convivencia y régimen sancionatorio."},
+  {id:6, t:"Reglamento de propiedad horizontal", k:"Reglamento", d:"2012-11-02", s:"Reglamento general de la copropiedad."},
+  {id:7, t:"Reglamento de zonas comunes y parqueaderos", k:"Reglamento", d:"2025-02-14", s:"Uso de salón social, BBQ, gimnasio y parqueaderos."},
+  {id:8, t:"Estados financieros 2025", k:"Financiero", d:"2026-02-28", s:"Balance general y estado de resultados."},
+  {id:9, t:"Presupuesto 2026", k:"Financiero", d:"2026-03-21", s:"Ingresos y gastos aprobados para la vigencia."},
+  {id:10,t:"Ejecución presupuestal a septiembre 2026", k:"Financiero", d:"2026-10-05", s:"Comparativo presupuesto vs. ejecución."},
+  {id:11,t:"Informe de gestión 2025", k:"Informe", d:"2026-03-10", s:"Resumen anual de la administradora."},
+  {id:12,t:"Pólizas de seguros áreas comunes", k:"Otro", d:"2026-01-15", s:"Cobertura y vigencia de las pólizas."}
+  /* Para un documento real agrega: url:"documentos/archivo.pdf" y el botón apuntará a ese archivo */
+];
+
+const NEWS = [
+  {id:1, c:"Comunicado", t:"Corte programado de agua – sábado 24 de octubre", d:"2026-10-14", s:"Mantenimiento de tanques de reserva.", b:"El sábado 24 de octubre habrá suspensión del servicio de agua entre las 8:00 a. m. y las 12:00 m. por mantenimiento y lavado de tanques. Se recomienda almacenar agua con anticipación."},
+  {id:2, c:"Noticia", t:"Resultados de la jornada de pintura de fachadas", d:"2026-10-08", s:"Se completó la intervención de los interiores 1 al 4.", b:"La administración informa la terminación de la pintura de fachadas de los interiores 1 al 4. Los interiores 5 y 6 se programarán para el primer trimestre del próximo año, sujeto a presupuesto."},
+  {id:3, c:"Informe de gestión", t:"Informe de gestión – tercer trimestre 2026", d:"2026-10-05", s:"Cartera, mantenimiento e inversiones al corte de septiembre.", b:"Resumen del trimestre: recaudo del 94 % de la cuota ordinaria, ejecución del 71 % del presupuesto, mantenimiento preventivo de ascensores y bombas al día y revisión de cámaras de seguridad. (Datos de ejemplo.)"},
+  {id:4, c:"Comunicado", t:"Recordatorio: horarios de mudanzas y trabajos locativos", d:"2026-09-28", s:"Lunes a viernes 8–5 y sábados hasta las 12.", b:"Se recuerda a los residentes que las mudanzas y trabajos locativos solo pueden realizarse de lunes a viernes entre las 8:00 a. m. y las 5:00 p. m., y los sábados hasta las 12:00 m. No se permiten domingos ni festivos."},
+  {id:5, c:"Noticia", t:"Jornada de vacunación de mascotas", d:"2026-09-18", s:"Con apoyo de la veterinaria aliada del sector.", b:"El sábado 3 de octubre se realizará una jornada de vacunación y desparasitación para mascotas en el parque central. Lleva el carné de vacunación. (Evento de ejemplo.)"},
+  {id:6, c:"Informe de gestión", t:"Informe de gestión 2025", d:"2026-03-10", s:"Balance del año: logros, inversiones y pendientes.", b:"Informe anual presentado a la asamblea: modernización de cámaras, renovación del salón social y reducción de la cartera. Documento completo disponible en Actas y documentos."},
+  {id:7, c:"Comunicado", t:"Citación a Asamblea General Ordinaria 2027", d:"2026-12-01", s:"Fecha tentativa de ejemplo.", b:"Texto de ejemplo para la citación a la asamblea anual. Reemplazar con fecha, hora, lugar y orden del día reales."}
+].filter(n=>n.d<="2026-10-16").sort((a,b)=>b.d.localeCompare(a.d));
+
+const SEED_ADS = [
+  {id:"s1", t:"Bicicleta de montaña rin 26 – buen estado", cat:"Venta", p:380000, desc:"Poco uso, frenos de disco. Se entrega con casco.", who:"Int. 2 · Apto 305", tel:"300 111 2233", d:"2026-10-10"},
+  {id:"s2", t:"Clases de refuerzo en matemáticas (bachillerato)", cat:"Servicios", p:45000, desc:"Por hora, presencial en el conjunto.", who:"Int. 4 · Apto 101", tel:"300 222 3344", d:"2026-10-07"},
+  {id:"s3", t:"Parqueadero cubierto en arriendo", cat:"Arriendo", p:150000, desc:"Mensual. Cerca de la torre 3.", who:"Int. 3 · Apto 204", tel:"300 333 4455", d:"2026-10-02"},
+  {id:"s4", t:"Se busca cuidado de adulto mayor – fines de semana", cat:"Se busca", p:null, desc:"Persona responsable con referencias.", who:"Int. 1 · Apto 402", tel:"300 444 5566", d:"2026-09-30"}
+];
+const RESIDENTS = { "1-101":{doc:"1234", name:"Residente de prueba (a paz y salvo)", ok:true,  owner:true,  coef:0.452},
+                    "2-202":{doc:"5678", name:"Residente de prueba (en mora)",       ok:false, owner:true,  coef:0.452},
+                    "3-303":{doc:"9012", name:"Residente de prueba (arrendatario)",  ok:true,  owner:false, coef:0.452} };
+
+/* Festivos Colombia 2026 */
+const FESTIVOS = ["2026-01-01","2026-01-12","2026-03-23","2026-04-02","2026-04-03","2026-05-01","2026-05-18","2026-06-08","2026-06-15","2026-06-29","2026-07-20","2026-08-07","2026-08-17","2026-10-12","2026-11-02","2026-11-16","2026-12-08","2026-12-25"];
+
+/* ============================================================
+   UTILIDADES
+   ============================================================ */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const MESES=["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+const fdate=iso=>{const [y,m,d]=iso.split("-").map(Number);return `${d} ${MESES[m-1]} ${y}`};
+const money=n=>"$"+Number(n).toLocaleString("es-CO");
+const store={
+  get(k,def){try{const v=localStorage.getItem(k);return v?JSON.parse(v):def}catch(e){return def}},
+  set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+};
+let toastT;
+function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove("show"),2800)}
+function openModal(html){$("#modal-body").innerHTML=html;$("#modal").classList.add("open");$("#modal-x").focus()}
+function closeModal(){$("#modal").classList.remove("open")}
+$("#modal-x").onclick=closeModal;
+$("#modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+function download(name,text,type="text/plain"){
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([text],{type:type+";charset=utf-8"}));
+  a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1500);
+}
+const slug=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+
+/* ============================================================
+   ROUTER
+   ============================================================ */
+const PAGES=["inicio","acerca","documentos","noticias","clasificados","censo","zonas","residuos","mudanzas","votacion","pagos"];
+function route(){
+  const h=(location.hash||"#inicio").slice(1); const p=PAGES.includes(h)?h:"inicio";
+  $$(".page").forEach(s=>s.classList.toggle("active",s.id==="page-"+p));
+  $$("nav a").forEach(a=>a.classList.toggle("active",a.dataset.p===p));
+  $("#nav").classList.remove("open");$("#burger").setAttribute("aria-expanded","false");
+  window.scrollTo({top:0,behavior:"auto"});
+  if(p==="mudanzas")updateMoveStatus();
+}
+window.addEventListener("hashchange",route);
+$("#burger").onclick=()=>{const o=$("#nav").classList.toggle("open");$("#burger").setAttribute("aria-expanded",o)};
+
+/* ============================================================
+   ACERCA — equipo
+   ============================================================ */
+const initials=n=>n.split(" ").filter(Boolean).slice(0,2).map(x=>x[0]).join("").toUpperCase();
+const personCard=p=>`<div class="card person"><div class="avatar" style="background:${p.c}">${esc(initials(p.n))}</div><h3>${esc(p.n)}</h3><div class="role">${esc(p.r)}</div></div>`;
+$("#team-seg").innerHTML=SEGURIDAD.map(personCard).join("");
+$("#team-man").innerHTML=MANTENIMIENTO.map(personCard).join("");
+
+/* ============================================================
+   DOCUMENTOS
+   ============================================================ */
+const kindPill={Acta:"p-navy",Reglamento:"p-green",Financiero:"p-brick",Informe:"p-navy",Otro:"p-green"};
+let docFilter="Todos";
+function renderDocs(){
+  const kinds=["Todos",...new Set(DOCS.map(d=>d.k))];
+  $("#doc-filters").innerHTML=kinds.map(k=>`<button class="chip" aria-pressed="${k===docFilter}" data-k="${k}">${k}</button>`).join("");
+  const list=DOCS.filter(d=>docFilter==="Todos"||d.k===docFilter).sort((a,b)=>b.d.localeCompare(a.d));
+  $("#doc-grid").innerHTML=list.map(d=>`
+    <article class="card doc">
+      <div class="top"><span class="pill ${kindPill[d.k]||"p-navy"}">${esc(d.k)}</span><span class="small muted">${fdate(d.d)}</span></div>
+      <h3>${esc(d.t)}</h3>
+      <p class="small muted" style="margin:0">${esc(d.s)}</p>
+      <div class="actions">
+        <button class="btn sm primary" data-view="${d.id}">Ver</button>
+        <button class="btn sm" data-dl="${d.id}">Descargar</button>
+      </div>
+    </article>`).join("");
+}
+function docText(d){
+  return `${d.t.toUpperCase()}\nParque Residencial Surbaná IV Etapa\nFecha: ${fdate(d.d)}\nTipo: ${d.k}\n\n${d.s}\n\n[Documento de ejemplo. Sustituir por el archivo oficial del conjunto.]\n`;
+}
+$("#doc-filters").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(b){docFilter=b.dataset.k;renderDocs()}});
+$("#doc-grid").addEventListener("click",e=>{
+  const v=e.target.closest("[data-view]"), dl=e.target.closest("[data-dl]");
+  if(v){const d=DOCS.find(x=>x.id==v.dataset.view);
+    if(d.url){window.open(d.url,"_blank","noopener");return}
+    openModal(`<h2 id="modal-title">${esc(d.t)}</h2><p><span class="pill ${kindPill[d.k]||"p-navy"}">${esc(d.k)}</span> <span class="small muted">${fdate(d.d)}</span></p><p>${esc(d.s)}</p><div class="notice info small">Vista previa de ejemplo. Aquí se mostrará el PDF oficial cuando cargues el archivo real.</div><button class="btn sm" id="m-dl" data-dl="${d.id}">Descargar</button>`);}
+  if(dl){const d=DOCS.find(x=>x.id==dl.dataset.dl);
+    if(d.url){const a=document.createElement("a");a.href=d.url;a.download="";a.click();return}
+    download(slug(d.t)+".txt",docText(d));toast("Descargando: "+d.t)}
+});
+$("#modal").addEventListener("click",e=>{const dl=e.target.closest("#m-dl");if(dl){const d=DOCS.find(x=>x.id==dl.dataset.dl);download(slug(d.t)+".txt",docText(d));toast("Descargando: "+d.t)}});
+
+/* ============================================================
+   NOTICIAS
+   ============================================================ */
+const newsPill={Noticia:"p-green",Comunicado:"p-brick","Informe de gestión":"p-navy"};
+let newsFilter="Todas";
+const newsCard=n=>`<article class="card news"><div style="display:flex;justify-content:space-between;gap:8px"><span class="pill ${newsPill[n.c]||"p-navy"}">${esc(n.c)}</span><span class="small muted">${fdate(n.d)}</span></div><h3>${esc(n.t)}</h3><p class="small muted" style="margin:0">${esc(n.s)}</p><button class="link" data-n="${n.id}">Leer más →</button></article>`;
+function renderNews(){
+  const cats=["Todas","Noticia","Comunicado","Informe de gestión"];
+  $("#news-filters").innerHTML=cats.map(k=>`<button class="chip" aria-pressed="${k===newsFilter}" data-k="${k}">${k==="Noticia"?"Noticias":k==="Comunicado"?"Comunicados":k==="Informe de gestión"?"Informes de gestión":k}</button>`).join("");
+  $("#news-grid").innerHTML=NEWS.filter(n=>newsFilter==="Todas"||n.c===newsFilter).map(newsCard).join("");
+}
+$("#news-filters").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(b){newsFilter=b.dataset.k;renderNews()}});
+function openNews(e){const b=e.target.closest("[data-n]");if(!b)return;const n=NEWS.find(x=>x.id==b.dataset.n);
+  openModal(`<span class="pill ${newsPill[n.c]||"p-navy"}">${esc(n.c)}</span> <span class="small muted">${fdate(n.d)}</span><h2 id="modal-title" style="margin-top:10px">${esc(n.t)}</h2><p>${esc(n.b)}</p>`)}
+$("#news-grid").addEventListener("click",openNews);$("#home-news").addEventListener("click",openNews);
+$("#home-news").innerHTML=NEWS.slice(0,3).map(newsCard).join("");
+
+/* ============================================================
+   CLASIFICADOS
+   ============================================================ */
+let verified=null, adFilter="Todos";
+function allAds(){return [...store.get("surbana_ads",[]),...SEED_ADS].sort((a,b)=>b.d.localeCompare(a.d))}
+function renderAds(){
+  const ads=allAds(), cats=["Todos",...new Set(ads.map(a=>a.cat))];
+  $("#ad-filters").innerHTML=cats.map(k=>`<button class="chip" aria-pressed="${k===adFilter}" data-k="${esc(k)}">${esc(k)}</button>`).join("");
+  $("#ad-grid").innerHTML=ads.filter(a=>adFilter==="Todos"||a.cat===adFilter).map(a=>`
+    <article class="card ad"><span class="pill p-green">${esc(a.cat)}</span>
+      <h3 style="margin-top:10px">${esc(a.t)}</h3>
+      ${a.p?`<div class="price">${money(a.p)}</div>`:""}
+      <p class="small">${esc(a.desc)}</p>
+      <div class="meta">${esc(a.who)} · ${fdate(a.d)}</div>
+      <div class="meta">Contacto: <b>${esc(a.tel)}</b></div></article>`).join("")||`<p class="muted">No hay anuncios en esta categoría.</p>`;
+}
+$("#ad-filters").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(b){adFilter=b.dataset.k;renderAds()}});
+$("#verify-form").addEventListener("submit",e=>{
+  e.preventDefault();
+  const i=$("#v-int").value, a=$("#v-apto").value.trim(), d=$("#v-doc").value.trim(), box=$("#verify-msg");
+  if(!i||!a||!/^\d{4}$/.test(d)){box.innerHTML=`<div class="notice warn small">Completa interior, apartamento y los 4 últimos dígitos de la cédula.</div>`;return}
+  const r=RESIDENTS[`${i}-${a}`];
+  if(!r||r.doc!==d){box.innerHTML=`<div class="notice warn small">No pudimos verificar tus datos. Revisa la información o comunícate con la administración.</div>`;return}
+  if(!r.ok){box.innerHTML=`<div class="notice warn"><b>No puedes publicar por ahora.</b> Tu apartamento registra saldo pendiente con la administración. Cuando estés a paz y salvo podrás publicar. <a href="#pagos">Ir a pagos →</a></div>`;verified=null;$("#ad-form-card").classList.add("hidden");return}
+  verified={who:`Int. ${i} · Apto ${a}`,name:r.name};
+  box.innerHTML="";$("#ad-who").textContent=`Verificado: Interior ${i}, apto ${a} — a paz y salvo ✔`;
+  $("#ad-form-card").classList.remove("hidden");toast("Verificación exitosa");
+});
+$("#ad-logout").onclick=()=>{verified=null;$("#ad-form-card").classList.add("hidden");$("#verify-form").reset()};
+$("#ad-form").addEventListener("submit",e=>{
+  e.preventDefault(); if(!verified){toast("Primero verifica tu estado");return}
+  const ad={id:"u"+Date.now(),t:$("#a-title").value.trim(),cat:$("#a-cat").value,p:Number($("#a-price").value)||null,desc:$("#a-desc").value.trim(),who:verified.who,tel:$("#a-contact").value.trim(),d:new Date().toISOString().slice(0,10)};
+  const mine=store.get("surbana_ads",[]);mine.push(ad);store.set("surbana_ads",mine);
+  e.target.reset();adFilter="Todos";renderAds();toast("Clasificado publicado");
+  $("#ad-grid").scrollIntoView({behavior:"smooth"});
+});
+
+/* ============================================================
+   CENSO
+   ============================================================ */
+$("#c-hasveh").addEventListener("change",e=>{$("#veh-box").classList.toggle("hidden",!e.target.checked)});
+$("#censo-form").addEventListener("submit",e=>{
+  e.preventDefault();
+  const v=id=>$(id).value.trim();
+  const has=$("#c-hasveh").checked;
+  if(has&&!/^[A-Za-z]{3}\d{2}[A-Za-z0-9]$/.test(v("#c-placa")) && $("#c-vtipo").value!=="Bicicleta"){toast("Revisa el formato de la placa (ej. ABC123)");$("#c-placa").focus();return}
+  const rec={fecha:new Date().toISOString(),
+    personal:{nombres:v("#c-nom"),apellidos:v("#c-ape"),tipoDoc:$("#c-tdoc").value,documento:v("#c-doc"),celular:v("#c-cel"),correo:v("#c-mail"),calidad:$("#c-cal").value,emergencia:{nombre:v("#c-emn"),telefono:v("#c-emt")}},
+    inmueble:{interior:$("#c-int").value,apartamento:v("#c-apto"),residentes:Number($("#c-hab").value),menores:Number($("#c-men").value)||0,adultosMayores:Number($("#c-may").value)||0,mascotas:Number($("#c-mas").value)||0,propietario:v("#c-prop"),telPropietario:v("#c-proptel")},
+    vehiculo:has?{tipo:$("#c-vtipo").value,placa:v("#c-placa").toUpperCase(),marca:v("#c-vmarca"),color:v("#c-vcolor"),parqueadero:v("#c-park")}:null,
+    habeasData:true};
+  const all=store.get("surbana_censo",[]);all.push(rec);store.set("surbana_censo",all);
+  $("#censo-form").classList.add("hidden");
+  const ok=$("#censo-ok");ok.classList.remove("hidden");
+  ok.innerHTML=`<div class="notice ok"><h3>¡Gracias, ${esc(rec.personal.nombres)}!</h3><p>Recibimos la actualización de datos del interior ${esc(rec.inmueble.interior)}, apto ${esc(rec.inmueble.apartamento)}.</p><p class="small muted">Modo demostración: los datos se guardan solo en este navegador. Para uso real hay que conectar el formulario a un servidor seguro.</p><button class="btn sm" id="censo-dl">Descargar copia</button> <button class="btn sm" id="censo-new">Registrar otro</button></div>`;
+  $("#censo-dl").onclick=()=>download(`censo-${slug(rec.personal.nombres)}-${rec.inmueble.interior}-${rec.inmueble.apartamento}.json`,JSON.stringify(rec,null,2),"application/json");
+  $("#censo-new").onclick=()=>{$("#censo-form").reset();$("#veh-box").classList.add("hidden");$("#censo-form").classList.remove("hidden");ok.classList.add("hidden");window.scrollTo({top:0})};
+  window.scrollTo({top:0,behavior:"smooth"});
+});
+
+/* ============================================================
+   MUDANZAS
+   ============================================================ */
+const mins=t=>{const [h,m]=t.split(":").map(Number);return h*60+m};
+function windowFor(dateStr){
+  const [y,m,d]=dateStr.split("-").map(Number); const dow=new Date(y,m-1,d).getDay();
+  if(FESTIVOS.includes(dateStr)) return {ok:false,why:"es un día festivo"};
+  if(dow===0) return {ok:false,why:"es domingo"};
+  if(dow===6) return {ok:true,start:480,end:720,label:"sábado de 8:00 a. m. a 12:00 m."};
+  return {ok:true,start:480,end:1020,label:"de 8:00 a. m. a 5:00 p. m."};
+}
+function bogotaNow(){
+  const f=new Intl.DateTimeFormat("en-CA",{timeZone:"America/Bogota",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"});
+  const p=Object.fromEntries(f.formatToParts(new Date()).map(x=>[x.type,x.value]));
+  return {date:`${p.year}-${p.month}-${p.day}`,min:(Number(p.hour)%24)*60+Number(p.minute)};
+}
+function updateMoveStatus(){
+  const n=bogotaNow(), w=windowFor(n.date), box=$("#move-status");
+  const open=w.ok&&n.min>=w.start&&n.min<w.end;
+  box.className="status "+(open?"yes":"no");
+  $("#ms-title").textContent=open?"Hoy se permiten mudanzas y trabajos locativos ahora":"En este momento no se permiten mudanzas ni trabajos locativos";
+  $("#ms-sub").textContent=w.ok?(open?"Horario de hoy: "+w.label:"Horario de hoy: "+w.label+". Fuera de horario."):"Hoy "+w.why+".";
+}
+$("#m-fecha").min=bogotaNow().date;
+$("#move-form").addEventListener("submit",e=>{
+  e.preventDefault();
+  const f=$("#m-fecha").value,i=$("#m-ini").value,o=$("#m-fin").value,box=$("#move-msg");
+  const bad=m=>{box.innerHTML=`<div class="notice warn"><b>No es posible programar esa fecha:</b> ${m}</div>`};
+  if(!f||!i||!o)return;
+  if(f<bogotaNow().date)return bad("la fecha ya pasó.");
+  const w=windowFor(f);
+  if(!w.ok)return bad(`ese día ${w.why}. Elige un día entre semana o sábado.`);
+  if(mins(o)<=mins(i))return bad("la hora de finalización debe ser posterior a la de inicio.");
+  if(mins(i)<w.start||mins(o)>w.end)return bad(`el horario permitido para ese día es ${w.label}`);
+  const rec={f,i,o,nom:$("#m-nom").value.trim(),apto:$("#m-apto").value.trim(),tipo:$("#m-tipo").value,emp:$("#m-emp").value.trim(),placa:$("#m-placa").value.trim().toUpperCase()};
+  const all=store.get("surbana_moves",[]);all.push(rec);store.set("surbana_moves",all);
+  box.innerHTML=`<div class="notice ok"><b>Solicitud recibida.</b> ${esc(rec.tipo)} el ${fdate(f)} de ${esc(i)} a ${esc(o)} — apto ${esc(rec.apto)}. La administración te confirmará por correo o WhatsApp. <span class="small muted">(Demo: se guarda solo en este navegador.)</span></div>`;
+  e.target.reset();
+});
+
+/* ============================================================
+   PAGOS
+   ============================================================ */
+$("#p-tipo").addEventListener("change",e=>{$("#p-amount").textContent=money(e.target.value)});
+$("#pay-online").onclick=()=>{
+  if(PAYMENT_URL){window.open(PAYMENT_URL,"_blank","noopener");return}
+  openModal(`<h2 id="modal-title">Pago en línea (modo demostración)</h2><p>Aún no hay una pasarela de pagos conectada. Para activarla, abre este archivo y pega el enlace de pago real (PSE u otra pasarela) en la constante <code>PAYMENT_URL</code>.</p><p class="small muted">Mientras tanto, puedes pagar por transferencia o en la oficina de administración.</p>`);
+};
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-copy]");if(!b)return;
+  const t=$("#"+b.dataset.copy).textContent;
+  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast("Copiado: "+t)).catch(()=>toast("Selecciona y copia: "+t));
+});
+
+/* ============================================================
+   INIT
+   ============================================================ */
+/* ============================================================
+   MASCOTAS Y RESIDUOS — buscador "¿Dónde va...?"
+   ============================================================ */
+const BINS=[
+  ["Botella plástica (PET)","blanca","Enjuagada y aplastada"],
+  ["Caja de cartón","blanca","Plegada y seca"],
+  ["Periódico y papel de oficina","blanca","Seco y sin grasa"],
+  ["Latas de aluminio o conservas","blanca","Enjuagadas"],
+  ["Frascos y botellas de vidrio","blanca","Sin tapa; si se quiebra, envuélvelo antes"],
+  ["Envases tipo cartón (leche, jugo)","blanca","Enjuagados y aplastados"],
+  ["Bolsas plásticas limpias","blanca","Limpias y secas"],
+  ["Papel higiénico","negra",""],
+  ["Servilletas y pañuelos usados","negra",""],
+  ["Pañales y toallas higiénicas","negra","Bien envueltos"],
+  ["Colillas de cigarrillo","negra","Totalmente apagadas"],
+  ["Icopor","negra","Si está limpio y seco, va a la bolsa blanca"],
+  ["Excrementos de mascota","negra","Bien amarrados en bolsa"],
+  ["Barrido y polvo","negra",""],
+  ["Cáscaras de frutas y verduras","verde",""],
+  ["Restos de comida","verde","Sin líquidos"],
+  ["Borra de café y bolsitas de té","verde","Sin grapa"],
+  ["Cáscaras de huevo","verde",""],
+  ["Hojas y restos de poda","verde",""],
+  ["Pilas y baterías","especial","Entrégalas en la jornada posconsumo o en la administración"],
+  ["Bombillos y tubos fluorescentes","especial","No los rompas ni los botes a la basura"],
+  ["Celulares, cargadores y electrodomésticos","especial","Residuos electrónicos: jornada de recolección"],
+  ["Medicamentos vencidos","especial","Puntos de recolección en droguerías"],
+  ["Aceite de cocina usado","especial","En botella plástica cerrada; entrégalo en la jornada"],
+  ["Escombros, muebles y colchones","especial","Coordina con la administración; no van al cuarto de basuras"]
+];
+const BIN_LABEL={blanca:"Bolsa blanca",negra:"Bolsa negra",verde:"Bolsa verde",especial:"Residuo especial"};
+const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+function renderBins(){
+  const q=norm($("#bin-q").value.trim());
+  const list=BINS.filter(b=>!q||norm(b[0]).includes(q));
+  $("#bin-list").innerHTML=list.length?list.map(b=>`<div class="bin-row"><span class="binpill b-${b[1]}">${BIN_LABEL[b[1]]}</span><div><b>${esc(b[0])}</b>${b[2]?`<div class="small muted">${esc(b[2])}</div>`:""}</div></div>`).join(""):`<p class="muted">No encontramos ese residuo. Consulta en la administración.</p>`;
+}
+$("#bin-q").addEventListener("input",renderBins);
+
+/* ============================================================
+   ASAMBLEAS Y VOTACIÓN
+   ============================================================ */
+const YNA=["A favor","En contra","Abstención"];
+const ASAMBLEAS=[
+  {id:"ext-2026-11", tipo:"Extraordinaria", t:"Asamblea General Extraordinaria – Reparación de cubiertas", f:"2026-11-07", hora:"9:00 a. m.", lugar:"Salón social y modalidad virtual (ejemplo)", cierre:"7 de noviembre de 2026, 12:00 m.", quorum:"Más del 50 % de los coeficientes de copropiedad (ejemplo)", abierta:true,
+   items:[
+    {id:"i1", q:"Aprobación del orden del día propuesto en la convocatoria.", opts:YNA},
+    {id:"i2", q:"Aprobar una cuota extraordinaria de $1.200.000 por apartamento, en 6 cuotas mensuales, para la reparación de cubiertas (ejemplo).", opts:YNA},
+    {id:"i3", q:"Elegir al contratista de la obra.", opts:["Propuesta A – Constructora Norte","Propuesta B – Impermeabilizaciones Andina","Propuesta C – Cubiertas del Sur","Abstención"]}
+   ]},
+  {id:"ord-2027-03", tipo:"Ordinaria", t:"Asamblea General Ordinaria 2027", f:"2027-03-20", hora:"9:00 a. m.", lugar:"Salón social y modalidad virtual (ejemplo)", cierre:"20 de marzo de 2027, 12:00 m.", quorum:"Según la ley y el reglamento de propiedad horizontal", abierta:false,
+   items:[
+    {id:"o1", q:"Aprobación del orden del día.", opts:YNA},
+    {id:"o2", q:"Aprobación de los estados financieros 2026.", opts:YNA},
+    {id:"o3", q:"Aprobación del presupuesto 2027.", opts:YNA},
+    {id:"o4", q:"Elección del Consejo de Administración.", opts:["Plancha 1","Plancha 2","Voto en blanco"]},
+    {id:"o5", q:"Revisor fiscal.", opts:["Contratar a la firma actual","Abrir nueva convocatoria","Abstención"]}
+   ]}
+];
+let voter=null;
+const getVotes=()=>store.get("surbana_votos",[]);
+const curAsm=()=>ASAMBLEAS.find(a=>a.id===$("#asm-sel").value);
+
+function initVote(){
+  $("#asm-sel").innerHTML=ASAMBLEAS.map(a=>`<option value="${a.id}">${esc(a.t)}</option>`).join("");
+  $("#asm-sel").addEventListener("change",renderAsm);
+  $("#vote-area").addEventListener("submit",onVoteSubmit);
+  $("#vote-area").addEventListener("click",onVoteClick);
+  renderAsm();
+}
+function renderAsm(){
+  const a=curAsm(), vs=getVotes().filter(v=>v.asm===a.id), coef=vs.reduce((s,v)=>s+v.coef,0);
+  $("#asm-info").innerHTML=`<p style="margin:12px 0 6px"><span class="pill ${a.tipo==="Ordinaria"?"p-navy":"p-brick"}">${a.tipo}</span> <span class="pill ${a.abierta?"p-green":"p-navy"}">${a.abierta?"Votación abierta":"Aún no abierta"}</span></p>
+    <p class="small" style="margin:6px 0"><b>Fecha:</b> ${fdate(a.f)}, ${esc(a.hora)}<br><b>Lugar:</b> ${esc(a.lugar)}<br><b>Cierre de votación:</b> ${esc(a.cierre)}<br><b>Quórum:</b> ${esc(a.quorum)}</p>
+    <p class="small muted" style="margin:0">Participación registrada (demo): ${vs.length} apartamento(s) · ${coef.toFixed(3)} % del coeficiente. Los resultados se publican al cierre.</p>`;
+  renderVoteArea();
+}
+function choicesText(a,rec){return a.items.map((it,n)=>`${n+1}. ${it.q}\n   Voto: ${rec.choices[it.id]}`).join("\n")}
+function renderVoteArea(){
+  const a=curAsm(), box=$("#vote-area");
+  if(!a.abierta){box.innerHTML=`<div class="notice info">La votación de esta asamblea abrirá con la convocatoria oficial. Mientras tanto, revisa el orden del día y los documentos en <a href="#documentos">Actas y documentos</a>.</div>`;return}
+  if(!voter){
+    box.innerHTML=`<div class="card" style="max-width:640px"><h2>Identifícate para votar</h2>
+      <div class="notice info small"><b>Demo:</b> interior 1, apto 101, cédula <code>1234</code> (propietario a paz y salvo) · 2-202 / <code>5678</code> (en mora) · 3-303 / <code>9012</code> (arrendatario).</div>
+      <form id="vote-verify" novalidate>
+        <div class="row">
+          <div><label for="vv-int">Interior / Torre</label><select id="vv-int"><option value="">Selecciona</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+          <div><label for="vv-apto">Apartamento</label><input id="vv-apto" inputmode="numeric" placeholder="Ej. 101"></div>
+        </div>
+        <div class="row"><div><label for="vv-doc">Últimos 4 dígitos de la cédula del propietario</label><input id="vv-doc" inputmode="numeric" maxlength="4" placeholder="••••"></div></div>
+        <button class="btn primary" type="submit">Continuar</button>
+      </form><div id="vote-msg" style="margin-top:12px"></div></div>`;
+    return;
+  }
+  const done=getVotes().find(v=>v.asm===a.id&&v.key===voter.key);
+  if(done){
+    box.innerHTML=`<div class="notice ok" style="max-width:760px"><h3>Voto registrado</h3>
+      <p>${esc(voter.label)} · ${esc(a.t)}</p>
+      <p>Código de comprobante: <b>${esc(done.code)}</b></p>
+      <ol class="small">${a.items.map(it=>`<li>${esc(it.q)}<br><b>${esc(done.choices[it.id])}</b></li>`).join("")}</ol>
+      <button class="btn sm" id="v-dl" type="button">Descargar comprobante</button> <button class="btn sm" id="v-out" type="button">Salir</button></div>`;
+    return;
+  }
+  box.innerHTML=`<div class="card" style="max-width:760px"><h2>Tu voto</h2>
+    <div class="notice ok small">Verificado: ${esc(voter.label)} — propietario a paz y salvo ✔ · Coeficiente ${voter.coef.toFixed(3)} %</div>
+    <form id="ballot">
+      ${a.items.map((it,n)=>`<fieldset class="q-item"><legend>Punto ${n+1}</legend><p>${esc(it.q)}</p>${it.opts.map(o=>`<label class="opt"><input type="radio" name="${it.id}" value="${esc(o)}" required> ${esc(o)}</label>`).join("")}</fieldset>`).join("")}
+      <label class="check" style="margin-bottom:14px"><input type="checkbox" id="b-ok" required> Confirmo que mi voto es definitivo y no podrá modificarse.</label>
+      <button class="btn green" type="submit">Registrar mi voto</button> <button class="btn" id="v-out" type="button">Salir</button>
+    </form></div>`;
+}
+function onVoteSubmit(e){
+  e.preventDefault(); const a=curAsm();
+  if(e.target.id==="vote-verify"){
+    const i=$("#vv-int").value, ap=$("#vv-apto").value.trim(), d=$("#vv-doc").value.trim(), m=$("#vote-msg");
+    const bad=t=>{m.innerHTML=`<div class="notice warn small">${t}</div>`};
+    if(!i||!ap||!/^\d{4}$/.test(d))return bad("Completa interior, apartamento y los 4 últimos dígitos de la cédula.");
+    const r=RESIDENTS[`${i}-${ap}`];
+    if(!r||r.doc!==d)return bad("No pudimos verificar tus datos. Revisa la información o comunícate con la administración.");
+    if(!r.owner)return bad("Tu registro figura como arrendatario. Solo el propietario, o su apoderado con poder escrito entregado a la administración, puede votar.");
+    if(!r.ok)return bad(`Tu apartamento registra saldo pendiente y la Ley 675 de 2001 no permite votar a propietarios en mora. <a href="#pagos">Ir a pagos →</a>`);
+    voter={key:`${i}-${ap}`,label:`Interior ${i}, apto ${ap}`,coef:r.coef};
+    renderVoteArea();return;
+  }
+  if(e.target.id==="ballot"){
+    if(getVotes().some(v=>v.asm===a.id&&v.key===voter.key)){toast("Este apartamento ya votó");renderVoteArea();return}
+    const fd=new FormData(e.target), choices={};
+    a.items.forEach(it=>choices[it.id]=fd.get(it.id));
+    if(a.items.some(it=>!choices[it.id])){toast("Responde todos los puntos");return}
+    const rec={asm:a.id,key:voter.key,coef:voter.coef,choices,code:"SUR-"+Date.now().toString(36).toUpperCase().slice(-5)+"-"+voter.key.replace(/\D/g,""),ts:new Date().toISOString()};
+    const all=getVotes();all.push(rec);store.set("surbana_votos",all);
+    toast("Voto registrado");renderAsm();
+  }
+}
+function onVoteClick(e){
+  if(e.target.closest("#v-out")){voter=null;renderVoteArea();return}
+  if(e.target.closest("#v-dl")){
+    const a=curAsm(), rec=getVotes().find(v=>v.asm===a.id&&v.key===voter.key); if(!rec)return;
+    download(`comprobante-${rec.code}.txt`,`COMPROBANTE DE VOTACIÓN (DEMO)\nParque Residencial Surbaná IV Etapa\n\nAsamblea: ${a.t}\nUnidad: ${voter.label}\nCoeficiente: ${voter.coef.toFixed(3)} %\nCódigo: ${rec.code}\nFecha y hora: ${rec.ts}\n\n${choicesText(a,rec)}\n`);
+  }
+}
+
+renderDocs();renderNews();renderAds();renderBins();initVote();route();
+setInterval(()=>{if($("#page-mudanzas").classList.contains("active"))updateMoveStatus()},60000);
+</script>
+</body>
+</html>
